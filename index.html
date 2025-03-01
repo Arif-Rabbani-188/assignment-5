@@ -22,9 +22,9 @@
             <div class="flex gap-5 items-center">
                 <div class="bg-[#f4f7ff] justify-center p-2 rounded-3xl flex items-center w-32 gap-2">
                     <img class="w-6 h-6" src="assets/checkbox.png" alt="">
-                    <h1 class="text-2xl font-bold">23</h1>
+                    <h1 id="total-task" class="text-2xl font-bold">23</h1>
                 </div>
-                <div>
+                <div id="color-change-btn">
                     <img class="w-8 h-8" src="assets/theme-btn.png" alt="">
                 </div>
             </div>
@@ -41,11 +41,11 @@
                         </div>
                         <div>
                             <p>Task Assigned</p>
-                            <h1 class="text-2xl font-bold">05</h1>
+                            <h1 id="uncompleted-task" class="text-2xl font-bold">6</h1>
                         </div>
 
                     </div>
-                    <div
+                    <div id="discover"
                         class="col-span-2 p-4 flex gap-8 px-10 items-center bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]  rounded-2xl">
                         <div class="p-0.5 border-2 border-dashed border-yellow-300">
                             <img class="" src="assets/board.png" alt="">
@@ -61,8 +61,8 @@
                             <img class="w-6 h-6" src="assets/calender.png" alt="">
                         </div>
                         <div>
-                            <p>Wed</p>
-                            <p class="font-bold">Jul 28 2025</p>
+                            <p id="day">Wed</p>
+                            <p id="date" class="font-bold"></p>
                         </div>
 
                     </div>
@@ -70,7 +70,7 @@
                 <div class="grid grid-cols-3 gap-6 mt-5 pt-5 border-t-2 border-blue-300 border-dashed">
                     <div class="bg-[#f4f7ff] p-4 rounded-2xl flex flex-col items-start gap-7">
                         <h1 class="p-2 rounded-3xl font-bold bg-white">ShopEase</h1>
-                        <h1 class="text-xl font-bold">Fix Mobile Button Issue</h1>
+                        <h1 id="fix-title" class="text-xl font-bold">Fix Mobile Button Issue</h1>
                         <p class="px-3 py-2 rounded-lg bg-white overflow-y-hidden h-20">Debug using Chrome DevTools, check for
                             overlapping elements, and ensure onClick works properly
                             and ensure onClick works properly</p>
@@ -79,12 +79,12 @@
                                 <p>Deadline</p>
                                 <p class="font-bold">21 March 2025</p>
                             </div>
-                            <button class="btn font-bold text-white bg-[#3752fd]">Completed</button>
+                            <button id="fix-btn" class="btn font-bold text-white bg-[#3752fd]" onclick="btnDisabled('fix-btn', 'fix-title')">Completed</button>
                         </div>
                     </div>
                     <div class="bg-[#f4f7ff] p-4 rounded-2xl flex flex-col items-start gap-7">
                         <h1 class="p-2 rounded-3xl font-bold bg-white">CloudSync</h1>
-                        <h1 class="text-xl font-bold">Add Dark Mode</h1>
+                        <h1 id="title2" class="text-xl font-bold">Add Dark Mode</h1>
                         <p class="px-3 py-2 rounded-lg bg-white h-20 overflow-hidden">Store the user's preference in localStorage,
                             update CSS variables dynamically, and apply a smooth transition effect.</p>
                         <div class="grid grid-cols-3">
@@ -92,12 +92,12 @@
                                 <p>Deadline</p>
                                 <p class="font-bold">21 March 2025</p>
                             </div>
-                            <button class="btn font-bold text-white bg-[#3752fd]">Completed</button>
+                            <button id="task2" onclick="btnDisabled('task2', 'title2')" class="btn font-bold text-white bg-[#3752fd]">Completed</button>
                         </div>
                     </div>
                     <div class="bg-[#f4f7ff] p-4 rounded-2xl flex flex-col items-start gap-7">
                         <h1 class="p-2 rounded-3xl font-bold bg-white">SwiftPay</h1>
-                        <h1 class="text-xl font-bold">Optimize Home Page</h1>
+                        <h1 id="title3" class="text-xl font-bold">Optimize Home Page</h1>
                         <p class="px-3 py-2 rounded-lg bg-white overflow-y-hidden h-20">Debug using Chrome DevTools, check for
                             overlapping elements, and ensure onClick works properly
                             and ensure onClick works properly</p>
@@ -106,12 +106,12 @@
                                 <p>Deadline</p>
                                 <p class="font-bold">21 March 2025</p>
                             </div>
-                            <button class="btn font-bold text-white bg-[#3752fd]">Completed</button>
+                            <button id="task3" onclick="btnDisabled('task3', 'title3')" class="btn font-bold text-white bg-[#3752fd]">Completed</button>
                         </div>
                     </div>
                     <div class="bg-[#f4f7ff] p-4 rounded-2xl flex flex-col items-start gap-7">
                         <h1 class="p-2 rounded-3xl font-bold bg-white">Meta</h1>
-                        <h1 class="text-xl font-bold">Add new emoji</h1>
+                        <h1 id="title4" class="text-xl font-bold">Add new emoji</h1>
                         <p class="px-3 py-2 rounded-lg bg-white overflow-y-hidden h-20">Debug using Chrome DevTools, check for
                             overlapping elements, and ensure onClick works properly
                             and ensure onClick works properly</p>
@@ -120,11 +120,11 @@
                                 <p>Deadline</p>
                                 <p class="font-bold">21 March 2025</p>
                             </div>
-                            <button class="btn font-bold text-white bg-[#3752fd]">Completed</button>
+                            <button id="task4" onclick="btnDisabled('task4', 'title4')" class="btn font-bold text-white bg-[#3752fd]">Completed</button>
                         </div>
                     </div>
                     <div class="bg-[#f4f7ff] p-4 rounded-2xl flex flex-col items-start gap-7">
-                        <h1 class="p-2 rounded-3xl font-bold bg-white">Google LLC</h1>
+                        <h1 id="title5" class="p-2 rounded-3xl font-bold bg-white">Google LLC</h1>
                         <h1 class="text-xl font-bold">Integrate OpenAI API</h1>
                         <p class="px-3 py-2 rounded-lg bg-white overflow-y-hidden h-20">Debug using Chrome DevTools, check for
                             overlapping elements, and ensure onClick works properly
@@ -134,11 +134,11 @@
                                 <p>Deadline</p>
                                 <p class="font-bold">21 March 2025</p>
                             </div>
-                            <button class="btn font-bold text-white bg-[#3752fd]">Completed</button>
+                            <button id="task5" onclick="btnDisabled('task5', 'title5')" class="btn font-bold text-white bg-[#3752fd]">Completed</button>
                         </div>
                     </div>
                     <div class="bg-[#f4f7ff] p-4 rounded-2xl flex flex-col items-start gap-7">
-                        <h1 class="p-2 rounded-3xl font-bold bg-white">Glassdoor</h1>
+                        <h1 id="title6" class="p-2 rounded-3xl font-bold bg-white">Glassdoor</h1>
                         <h1 class="text-xl font-bold">Improve Job searching</h1>
                         <p class="px-3 py-2 rounded-lg bg-white overflow-y-hidden h-20">Debug using Chrome DevTools, check for
                             overlapping elements, and ensure onClick works properly
@@ -148,20 +148,25 @@
                                 <p>Deadline</p>
                                 <p class="font-bold">21 March 2025</p>
                             </div>
-                            <button class="btn font-bold text-white bg-[#3752fd]">Completed</button>
+                            <button id="task6" onclick="btnDisabled('task6', 'title6')" class="btn font-bold text-white bg-[#3752fd]">Completed</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bg-white p-4 rounded-3xl flex flex-col items-center">
+            <div class="bg-white p-4 rounded-3xl flex flex-col gap-4 items-center">
                 <div class="flex gap-3 p-4">
                     <img src="assets/activity.png" alt="">
                     <h1 class="text-lg font-bold">Activity Log</h1>
                 </div>
-                <button class="btn font-bold text-white bg-[#3752fd]">Clear History</button>
+                <button id="activity-btn" class="btn font-bold text-white bg-[#3752fd]" onclick="clearActivity()">Clear History</button>
+                <div id="activity-log" class="flex flex-col gap-4 items-center">
+
+                </div>
             </div>
         </div>
     </section>
+
+    <script src="script/script.js"></script>
 
 </body>
 
