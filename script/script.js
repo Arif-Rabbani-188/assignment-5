@@ -1,5 +1,4 @@
 let totalTask = document.getElementById("total-task");
-let colorChangeBtn = document.getElementById("color-change-btn");
 
 let uncompletedTask = document.getElementById("uncompleted-task");
 let discover = document.getElementById("discover");
@@ -54,4 +53,18 @@ function btnDisabled(idName, titleId) {
 
 function clearActivity(){
     activityLog.innerHTML = ``;
+}
+
+function randomColor(){
+    let codeHEX = Math.floor(Math.random()*10000000).toString(16);
+    document.body.style.background = "#" + codeHEX;
+}
+
+
+discover.addEventListener("click", function (){
+    window.location.href = "./question.html";
+})
+
+function back(){
+    window.location.href = "index.html"
 }
